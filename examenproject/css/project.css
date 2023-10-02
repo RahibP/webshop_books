@@ -1,0 +1,1100 @@
+/* --ALGEMENE STYLING VOOR ALLE PAGINA'S-- */
+
+body {
+    font-family: "Verdana", sans-serif;
+    margin: 0;
+    background-color: #c5d5cb;
+}
+
+
+.hiddenTitle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+}
+
+footer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* --NAVBAR-- */
+
+nav {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    gap: 0;
+    margin: 0;
+    padding: 5px;
+    height: 50px;
+    background-color: #e3e0cf;
+}
+
+.menu li {
+    list-style-type: none;
+    margin: 1px;
+}
+
+.knop {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 160%;
+    color: #220803;
+    padding: 16px;
+    margin: 16px;
+    text-decoration: none;
+    line-height: 50px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: medium;
+    cursor: pointer;
+}
+
+.knop:link {
+    background-color: #fafa9e;
+    color: #220803;
+}
+
+.currentPage {
+    background-color: #5B5EA6;
+}
+
+.knop:hover {
+    background-color: #5B5EA6;
+    color: blue;
+    line-height: 50px;
+}
+
+
+/* Dropdown submenu bij Contactpagina */
+
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in;
+    display: none;
+    list-style: none;
+    position: absolute;
+    border: 3px black solid;
+    background-color: #6F9FD8;
+    width: 115px;
+}
+
+.submenu li a {
+    text-decoration: none;
+}
+
+ul li:hover > ul, ul li:focus-within > ul,
+.submenu:hover, .submenu:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.submenu li {
+    clear: both;
+    width: auto;
+}
+
+
+/* --HOME-- */
+
+.indexGrid {
+    display: grid;
+    grid-template-areas: 'hheader'
+                        'hmain'
+                        'hfooter';
+}
+
+.indexheader {
+    grid-area: hheader;
+    width: auto;
+}
+
+.indexmain {
+    grid-area: hmain;
+    display: grid;
+    grid-template-areas: 'nieuweboeken'
+                            'algemeneinfo';
+    width: auto;
+}
+
+.indexfooter {
+    grid-area: hfooter;
+    position: relative;
+    bottom: 0;
+    width: auto;
+    height: 50px;
+}
+
+
+.nieuweboeken {
+    display: grid;
+    grid-template-areas: 'titelNieuweboeken'
+                            'boeken';
+    grid-area: nieuweboeken;
+    width: auto;
+
+}
+
+.titelNieuweboeken {
+    grid-area: titelNieuweboeken;
+}
+
+.boeken {
+    grid-area: boeken;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+    margin: auto;
+    padding: 16px;
+    justify-content: center;
+    font-style: italic;
+    font-size: 16px;
+    background-color: #F7CAC9;
+}
+
+
+.nieuweboeken > h2 {
+    text-align: center;
+    padding: 10px;
+    width: auto;
+}
+
+.uitgelichteboek {
+    margin-left: 15px;
+}
+
+.uitgelichteboek li {
+    list-style-type: none;
+    margin-left: 38px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-style: italic;
+    justify-self: right;
+}
+
+
+.algemeneInfo {
+    grid-area: algemeneinfo;
+    display: inline-flex;
+}
+
+
+.beschrijvingProduct {
+    width: auto;
+    text-align: left;
+    margin-left: 7px;
+    margin-right: 35px;
+    white-space: normal;
+    font-size: 16px;
+}
+
+.overMij {
+    width: auto;
+    text-align: left;
+    margin-right: 15px;
+    white-space: normal;
+    font-size: 16px;
+}
+
+.testimonials {
+    display: inline-table;
+    border: 2px black solid;
+    width: auto;
+    height: 60%;
+    margin-left: 15px;
+    padding: 8px;
+    background-color: #009B77;
+    font-size: 16px;
+}
+
+
+.testimonialSilhouette {
+    max-width: 120px;
+    max-height: 120px;
+
+}
+
+
+/* --PRODUCTOVERZICHT-- */
+
+.productoverzichtGrid {
+    display: grid;
+    grid-template-areas: 'POheader'
+                            'POmain'
+                            'POfooter';
+}
+
+.productoverzichtheader {
+    grid-area: POheader;
+}
+
+.productoverzichtmain {
+    grid-area: POmain;
+    display: grid;
+    grid-template-areas: 'Boekcategorie';
+}
+
+.productoverzichtfooter {
+    grid-area: POfooter;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/* Filter voor de boeken */
+
+.titelFilter {
+    margin: 12px;
+    font-size: 18px;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.filterproduct .filterkeuze {
+    margin-left: 24px;
+    margin-right: 26px;
+}
+
+.filterselectie {
+    margin-bottom: 30px;
+}
+
+.filternaam {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.filternaam:hover {
+    background-color: #009B77;
+}
+
+.filterproduct .boekenoverzicht .all {
+    display: none;
+}
+
+/* selectie: alles */
+
+.filterproduct input[id="all"]:checked ~ .boekenoverzicht .all {
+    display: block;
+}
+
+/* selectie: 10 tot 20 euro */
+
+.filterproduct input[id="tientot20"]:checked ~ .boekenoverzicht .tientot20 {
+    display: block;
+}
+
+/* selectie: 20 tot 30 euro */
+
+.filterproduct input[id="twintigtot30"]:checked ~ .boekenoverzicht .twintigtot30 {
+    display: block;
+}
+
+/* selectie: 30 tot 40 euro */
+
+.filterproduct input[id="dertigtot40"]:checked ~ .boekenoverzicht .dertigtot40 {
+    display: block;
+}
+
+/* Categoriëen */
+
+
+.Boekcategorie {
+    grid-area: Boekcategorie;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: normal;
+}
+
+
+.Boekcategorie > h4 {
+    flex: 0 0 90%;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    position: relative;
+    height: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 12px;
+}
+
+.Boekcategorie h5 {
+    font-size: 13px;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    text-align: center;
+}
+
+.boekExemplaar {
+    flex-basis: 210px;
+    margin-top: auto;
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.boekExemplaar li {
+    list-style-type: none;
+    width: 65%;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+}
+
+
+/* --PRODUCTDETAIL-- */
+
+.productdetailGrid {
+    display: grid;
+    grid-template-areas: 'PDheader'
+                            'PDmain'
+                            'PDfooter';
+}
+
+.productdetailheader {
+    grid-area: PDheader;
+}
+
+.productdetailmain {
+    grid-area: PDmain;
+    display: grid;
+}
+
+.productdetailfooter {
+    grid-area: PDfooter;
+}
+
+/* breadcrumb menu voor productdetail */
+
+.breadcrumbMenu {
+    padding: 12px;
+    margin: 13px 15px;
+    border: 2px solid #172d91;
+    text-align: center;
+    width: fit-content;
+}
+
+.breadcrumbItem {
+    display: inline-block;
+    color: #375891;
+}
+
+.breadcrumbItem:not(:last-of-type)::after {
+    content: '>';
+    margin-right: 5px;
+    margin-left: 10px;
+    color: mediumblue;
+}
+
+.breadcrumbLink {
+    text-decoration: none;
+    color: #911c04;
+}
+
+.breadcrumbLink:hover {
+    text-decoration: underline;
+    color: #E15D44;
+}
+
+
+/* snelle info product */
+
+.kleinBoekFoto {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.productInfoAlgemeen {
+    display: grid;
+    grid-template-areas: 'productInfoKort'
+                        'productOmschrijving'
+                        'specificaties';
+    gap: 40px;
+    margin-left: 25px;
+    grid-template-rows: repeat(3, 0.1fr);
+}
+
+.productInfoKort {
+    grid-area: productInfoKort;
+    display: grid;
+    grid-template-areas: 'fotosboek kenmerken';
+    width: 0;
+    margin-left: 3em;
+}
+
+.coverGroot {
+    width: 450px;
+    height: 450px;
+}
+
+.titelBoekPD {
+    font-size: 28px;
+    color: #009B77;
+    margin-left: 15px;
+}
+
+
+.fotosBoek {
+    grid-area: fotosboek;
+    margin: 0;
+}
+
+.fotoKleinSec {
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+.kenmerkenBoek {
+    grid-area: kenmerken;
+    float: right;
+    margin: auto auto auto 300px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #9B2335;
+}
+
+
+.kenmerkenBoek ul li {
+    list-style-type: none;
+}
+
+.knopBestellen {
+    width: 110px;
+    height: 55px;
+    font-family: "Verdana", sans-serif;
+    font-size: 20px;
+    margin-top: 55px;
+    margin-left: 40px;
+    background-color: lightsalmon;
+    color: #172d91;
+}
+
+.knopBestellen:hover {
+    background-color: #e66465;
+}
+
+/* productomschrijving gedeelte */
+
+.productOmschrijving {
+    grid-area: productOmschrijving;
+    border-top: 3px black solid;
+    width: auto;
+}
+
+.titelProductomschrijving {
+    font-size: 20px;
+    color: #202f2b;
+}
+
+.productOmschrijving p {
+    text-align: center;
+    font-size: 18px;
+    color: #9B2335;
+}
+
+/* Specificatie gedeelte */
+
+.specificaties {
+    grid-area: specificaties;
+    font-weight: bold;
+    width: auto;
+}
+
+.specificatiesTitel {
+    font-size: 20px;
+    color: #202f2b;
+}
+
+.specificaties ul {
+    border: 3px black solid;
+    font-size: 20px;
+    list-style-type: none;
+    color: #9B2335;
+    width: auto;
+}
+
+
+/* FAQ pagina */
+
+.FAQGrid {
+    display: grid;
+    grid-template-areas: 'FAQheader'
+                        'FAQmain'
+                        'FAQfooter';
+}
+
+.FAQheader {
+    grid-area: FAQheader;
+}
+
+.FAQmain {
+    grid-area: FAQmain;
+}
+
+.FAQfooter {
+    grid-area: FAQfooter;
+}
+
+.veelgesteldevraag {
+    margin: 12px;
+    padding: 1em;
+    border: 4px solid black;
+    border-radius: 8px;
+    background-color: #955251;
+    font-size: 16px;
+    font-style: oblique;
+    transition: all 1s ease-in-out;
+    max-height: 20px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.antwoordfaq {
+    cursor: pointer;
+    margin: auto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.veelgesteldevraag[open] {
+    background-color: #55B4B0;
+    max-height: 200px;
+}
+
+.veelgesteldevraag[open] summary {
+    padding-bottom: 1rem;
+}
+
+
+/* Contact pagina */
+
+.contactGrid {
+    display: grid;
+    grid-template-areas: 'contactheader'
+                        'contactmain'
+                        'contactfooter';
+}
+
+.contactheader {
+    grid-area: contactheader;
+}
+
+.contactmain {
+    grid-area: contactmain;
+}
+
+.contactfooter {
+    grid-area: contactfooter;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.titelContact {
+    font-size: 25px;
+    color: #202f2b;
+}
+
+.contactInfo {
+    display: block;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: 18px;
+}
+
+.locatieKaart {
+    text-align: center;
+    color: #202f2b;
+}
+
+.kaartPin {
+    display: block;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    border: 1px groove #202f2b;
+    border-radius: 8px;
+}
+
+
+/* --PERSONALISERING-- */
+
+.personaliseringGrid {
+    grid-template-areas: 'personalheader'
+                         'personalmain'
+                         'personalfooter';
+}
+
+.personaliseringheader {
+    grid-area: personalheader;
+}
+
+.personaliseringmain {
+    grid-area: personalmain;
+}
+
+.personaliseringfooter {
+    grid-area: personalfooter;
+}
+
+/* formulier */
+
+.titelBestelling {
+    text-align: center;
+    font-weight: bold;
+}
+
+.bestelformulier {
+    display: grid;
+    grid-template-areas: 'persGegevens adresGegevens productBestelling'
+                        'persGegevens adresGegevens productPersonalisering';
+    width: auto;
+    margin: 1.5em 13em;
+    align-items: center;
+    font-family: "Verdana", sans-serif;
+    border: 8px #3D9970 solid;
+    background-color: #91B2C7;
+
+}
+
+
+fieldset {
+    padding: 1em 3em;
+    width: auto;
+    align-self: stretch;
+    font-size: 15px;
+    border: none;
+    font-family: "Verdana", sans-serif;
+    color: #0c0704;
+}
+
+
+/* fieldsets per categorie van informatie */
+
+.persGegevens {
+    grid-area: persGegevens;
+}
+
+
+.adresGegevens {
+    grid-area: adresGegevens;
+}
+
+.productBestelling {
+    grid-area: productBestelling;
+}
+
+.productPersonalisering {
+    grid-area: productPersonalisering;
+}
+
+/* labels en invoervelden */
+
+.personaliseringlabel, .personaliseringInvoer {
+    display: block;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.personaliseringlabelselect, .selectMenu {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+input {
+    font-family: "Verdana", sans-serif;
+    font-size: 13px;
+    width: auto;
+}
+
+.kleurkeuzePersonalisering {
+    width: 50px;
+}
+
+
+textarea {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: auto;
+    height: 120px;
+    font-size: 15px;
+    font-family: "Verdana", sans-serif;
+    font-weight: bold;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+
+input[type="radio"] {
+    margin-left: 1.5em;
+    margin-right: 0;
+    margin-top: 5px;
+}
+
+
+/* submit knop formulier */
+
+.submitKnop {
+    width: 180px;
+    height: 60px;
+    border: 2px #2e81e0 solid;
+    background-color: coral;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: "Verdana", sans-serif;
+}
+
+.submitKnop:hover {
+    background-color: #9198e5;
+}
+
+/* --BEVESTIGING-- */
+
+.bevestigingGrid {
+    display: grid;
+    grid-template-areas: 'bevestigingheader'
+                        'bevestigingmain'
+                        'bevestigingfooter';
+    background-color: mediumturquoise;
+}
+
+.bevestigingheader {
+    grid-area: bevestigingheader;
+}
+
+.bevestigingmain {
+    grid-area: bevestigingmain;
+    justify-self: center;
+    text-align: center;
+}
+
+.bevestigingfooter {
+    grid-area: bevestigingfooter;
+}
+
+
+.bevestigBericht {
+    margin-top: 5vh;
+    border: #220803 3px solid;
+    border-radius: 6px;
+    background-color: #9B2335;
+    font-size: 20px;
+    font-style: oblique;
+    width: auto;
+    height: auto;
+    font-family: "Verdana", sans-serif;
+}
+
+.bevestigBericht .overzicht {
+    margin-bottom: 0;
+    font-size: 0.8em;
+}
+
+.overzicht {
+    font-weight: bold;
+}
+
+.bevestigBericht .overzicht_item {
+    margin: 5px 0;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+
+/* --MEDIA QUERIES-- */
+
+@media screen and (max-width: 1500px) {
+
+    /* PERSONALISERING */
+    .bestelformulier {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 25%;
+    }
+
+
+}
+
+@media screen and  (max-width: 1050px) {
+
+    /* PRODUCTDETAIL */
+    .productInfoKort {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .productOmschrijving {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .kenmerkenBoek {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    /* navbar (elke pagina) */
+    nav {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 15px;
+
+    }
+
+    .menu {
+        display: inline-block;
+        background: transparent;
+    }
+
+    header {
+        border: 2px #fafa9e solid;
+        background-color: #fafa9e;
+    }
+
+    .menu li {
+        margin-bottom: 30px;
+    }
+
+    .submenu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .knop {
+        font-size: 180%;
+        border: none;
+    }
+
+    /* nieuwe boeken (HOME) */
+    .uitgelichteboek {
+        font-size: 14px;
+    }
+
+    .uitgelichteboek li {
+        font-size: 16px;
+    }
+
+    .nieuweboeken {
+        display: block;
+        width: auto;
+    }
+
+    .boeken {
+        width: auto;
+    }
+
+    .nieuweboekCover {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* algemene info (HOME) */
+    .beschrijvingProduct {
+        font-size: 90%;
+    }
+
+    .overMijfoto {
+        width: 100px;
+        height: 100px;
+    }
+
+    .overMij {
+        font-size: 90%;
+    }
+
+    .testimonials {
+        font-size: 90%;
+    }
+
+    .testimonialSilhouette {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* PRODUCTDETAIL */
+
+    .kenmerkenBoek {
+        margin: 0;
+    }
+
+}
+
+@media screen and  (max-width: 768px) {
+
+
+    /* nieuwe boeken (HOME) */
+    .uitgelichteboek {
+        font-size: 12px;
+    }
+
+    .uitgelichteboek li {
+        font-size: 14px;
+    }
+
+
+    .nieuweboekCover {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* algemene info (HOME) */
+    .beschrijvingProduct {
+        font-size: 80%;
+    }
+
+
+    .overMij {
+        font-size: 80%;
+    }
+
+    .testimonials {
+        font-size: 80%;
+    }
+
+    /* PRODUCTOVERZICHT */
+    .Boekcategorie {
+        justify-content: center;
+    }
+
+
+    /* FAQ */
+    .veelgesteldevraag {
+        padding-bottom: 22px;
+        font-size: 15px;
+    }
+
+    .antwoordfaq {
+        font-size: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+    /* algemene info (HOME) */
+    .algemeneInfo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .testimonialTitel {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+
+    .overMij {
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+
+
+    /* CONTACT */
+    .contactInfo {
+        font-size: 16px;
+    }
+
+    .kaartPin {
+        width: 500px;
+        height: 500px;
+    }
+
+    .coverGroot {
+        width: 350px;
+        height: 350px;
+    }
+
+    /* PRODUCTDETAIL */
+
+    .productOmschrijving p {
+        text-align: initial;
+    }
+
+    /* BEVESTIGING */
+
+    .bevestigBericht {
+        font-size: 18px;
+        width: 440px;
+    }
+
+    /* BEVESTIGING */
+    .bevestigBericht .overzicht_item  {
+        text-align: center;
+        margin: 2px 0;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    /* CONTACT */
+    .contactInfo {
+        font-size: 15px;
+    }
+
+    .kaartPin {
+        width: 450px;
+        height: 450px;
+    }
+
+    /* PRODUCTDETAIL */
+    .productOmschrijving p {
+        font-size: 16px;
+        text-align: initial;
+    }
+
+    .specificatiesTitel {
+        font-size: 18px;
+    }
+
+    .specificaties ul {
+        font-size: 18px;
+    }
+
+
+
+}
+
+

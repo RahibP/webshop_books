@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalisering</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <script src="../script/form_validation.js" defer></script>
+</head>
+<body class="personaliseringGrid">
+
+<header class="personaliseringheader">
+
+    <h1 class="hiddenTitle">Personalisering</h1>
+    <nav>
+
+        <h2 class="hiddenTitle">Menu</h2>
+
+        <ul class="menu">
+
+            <li><a class="knop" href="../index.html">Home</a></li>
+            <li><a class="knop" href="ProductoverzichtPagina.html">Boeken</a></li>
+            <li><a class="knop currentPage" href="PersonaliseringPagina.html">Personalisering</a></li>
+            <li><a class="knop" href="FAQPagina.html">FAQ</a></li>
+            <li><a class="knop" href="ContactPagina.html">Contact</a>
+                <ul class="submenu">
+                    <li><a href="https://www.facebook.com/kareldegrotehogeschool/">Facebook</a></li>
+                    <li><a href="https://twitter.com/kdghogeschool">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/kdghogeschool/">Instagram</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    </nav>
+
+</header>
+
+<main class="personaliseringmain">
+
+    <section>
+
+        <h2 class="titelBestelling">Bestelformulier</h2>
+
+        <form id="bform" class="bestelformulier" action="Subpagina's/ConfirmPagina.html" method="get">
+
+            <fieldset class="persGegevens">
+
+                <legend class="hiddenTitle">Persoonlijke gegevens</legend>
+
+
+                <label class="personaliseringlabel" for="voornaam">Voornaam:</label>
+                <input class="personaliseringInvoer" type="text" id="voornaam" name="voornaam">
+
+                <label class="personaliseringlabel" for="achternaam">Achternaam:</label>
+                <input class="personaliseringInvoer" type="text" id="achternaam" name="achternaam">
+
+                <label class="personaliseringlabel" for="geboortedatum">Geboortedatum:</label>
+                <input class="personaliseringInvoer" type="date" id="geboortedatum" name="geboortedatum"
+                max="2004-01-01">
+
+                <label class="personaliseringlabel" for="gsmnr">Telefoonnummer:</label>
+                <input class="personaliseringInvoer" type="tel" id="gsmnr" name="gsmnr"
+                       placeholder="Start met 04..." maxlength="10">
+
+                <label class="personaliseringlabel" for="email">E-mail:</label>
+                <input class="personaliseringInvoer" type="email" id="email" name="email">
+
+
+            </fieldset>
+
+            <fieldset class="adresGegevens">
+
+                <legend class="hiddenTitle">Adres</legend>
+
+
+                <label class="personaliseringlabel" for="straatnaam">Straatnaam:</label>
+                <input class="personaliseringInvoer" type="text" id="straatnaam" name="straat">
+
+                <label class="personaliseringlabel" for="huisnr">Huisnummer:</label>
+                <input class="personaliseringInvoer" type="number" id="huisnr" name="huisnr">
+
+                <label class="personaliseringlabel" for="postcode">Postcode:</label>
+                <input class="personaliseringInvoer" type="number" id="postcode" name="postcode" min="1000"
+                       max="9999">
+
+                <label class="personaliseringlabel" for="plaats">Plaats:</label>
+                <input class="personaliseringInvoer" type="text" id="plaats" name="plaats">
+
+                <label class="personaliseringlabelselect" for="provincie">Provincie:</label>
+                <select class="selectMenu" name="provincie" id="provincie" size="5">
+
+                    <optgroup label="Vlaanderen">
+
+                        <option value="Antwerpen">Antwerpen</option>
+                        <option value="Limburg">Limburg</option>
+                        <option value="Oost-Vlaanderen">Oost-Vlaanderen</option>
+                        <option value="Vlaams-Brabant">Vlaams-Brabant</option>
+                        <option value="West-Vlaanderen">West-Vlaanderen</option>
+
+                    </optgroup>
+
+                    <optgroup label="Wallonië">
+
+                        <option value="Henegouwen">Henegouwen</option>
+                        <option value="Luik">Luik</option>
+                        <option value="Luxemburg">Luxemburg</option>
+                        <option value="Namen">Namen</option>
+                        <option value="Waals-Brabant">Waals-Brabant</option>
+
+                    </optgroup>
+
+
+                </select>
+
+
+            </fieldset>
+
+            <fieldset class="productBestelling">
+
+                <legend class="hiddenTitle">Welk product bestelt u?</legend>
+
+                <label class="personaliseringlabelselect" for="productkeuze">Selecteer uw product uit deze
+                    lijst:</label>
+                <select class="selectMenu" name="productkeuze" id="productkeuze" size="5">
+
+                    <optgroup label="Romans">
+
+                        <option value="Violeta">Violeta</option>
+                        <option value="Problemen die er geen zijn">Problemen die er geen zijn</option>
+                        <option value="Cold Enough for Snow">Cold Enough for Snow</option>
+                        <option value="Stranded">Stranded</option>
+                        <option value="Des gens comme eux">Des gens comme eux</option>
+                        <option value="anéantir">anéantir</option>
+                        <option value="Ein von Schatten begrenzter Raum">Ein von Schatten begrenzter Raum</option>
+                        <option value="Fieber 17">Fieber 17</option>
+
+                    </optgroup>
+
+                    <optgroup label="Graphic novels">
+
+                        <option value="De man van nu">De man van nu</option>
+                        <option value="Jheronimus">Jheronimus</option>
+                        <option value="In the Pines">In the Pines</option>
+                        <option value="Styx, of: De zesplankenkoorts">Styx, of: De zesplankenkoorts</option>
+                        <option value="Rembrandt">Rembrandt</option>
+                        <option value="Dansen op de vulkaan">Dansen op de vulkaan</option>
+                        <option value="Door zonder familie">Door zonder familie</option>
+                        <option value="Het boek Genesis">Het boek Genesis</option>
+
+                    </optgroup>
+
+                    <optgroup label="Geschiedenisboeken">
+
+                        <option value="Naar de sterren">Naar de sterren</option>
+                        <option value="Dit is Europa">Dit is Europa</option>
+                        <option value="Het aanzien van 2021">Het aanzien van 2021</option>
+                        <option value="Empire of Pain">Empire of Pain</option>
+                        <option value="Four Lost Cities" title="Four Lost Cities: A Secret History of the Urban Age">Four
+                            Lost Cities
+                        </option>
+                        <option value="L'Italie Depuis 1870">L'Italie Depuis 1870</option>
+                        <option value="Les témoignages écrits de la Shoah">Les témoignages écrits de la Shoah</option>
+                        <option value="Historia verdadera de la conquista" title="Historia verdadera de la conquista de la Nueva España">
+                            Historia verdadera de la conquista
+                        </option>
+
+                    </optgroup>
+
+
+                </select>
+
+            </fieldset>
+
+            <fieldset class="productPersonalisering">
+
+
+                <legend class="hiddenTitle">Hoe wilt u uw product personaliseren?</legend>
+
+                <label class="personaliseringlabel" for="personaliseringkleur">Geef hieronder aan in welke kleur u de
+                    cover van het boek wil laten
+                    personaliseren.</label>
+                <input class="personaliseringInvoer kleurkeuzePersonalisering" type="color" id="personaliseringkleur" name="personaliseringkleur">
+
+
+                <label class="personaliseringlabel" for="personaliseringtekst">Voer hier uw persoonlijke tekst in die op
+                    het colofon van het boek bedrukt zal
+                    worden:</label>
+                <textarea name="personaliseringtekst" id="personaliseringtekst" maxlength="140"
+                          placeholder="maximaal 140 karakters toegelaten..."></textarea>
+
+                <label class="personaliseringlabelselect" for="personaliseringlettertype">Selecteer hieronder een
+                    aangepast lettertype voor uw boek:</label>
+                <select class="selectMenu" name="personaliseringlettertype" id="personaliseringlettertype" size="5">
+
+                    <option value="helvetica">Helvetica</option>
+                    <option value="baskerville">Baskerville</option>
+                    <option value="timesnewroman">Times New Roman</option>
+                    <option value="bodoni">Bodoni</option>
+                    <option value="gillsans">Gill Sans</option>
+                    <option value="rockwell">Rockwell</option>
+                    <option value="futura">Futura</option>
+                    <option value="cambria">Cambria</option>
+                    <option value="verdana">Verdana</option>
+
+                </select>
+
+
+                <input class="submitKnop" type="submit" value="Plaats bestelling">
+
+            </fieldset>
+
+
+        </form>
+
+    </section>
+
+
+</main>
+
+<footer class="personaliseringfooter">
+    <p>©Karel de Grote Hogeschool</p>
+</footer>
+</body>
+</html>

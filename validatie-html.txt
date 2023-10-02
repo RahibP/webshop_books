@@ -1,0 +1,5 @@
+Warning: The “date” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.
+From line 60, column 17; to line 61, column 33 in resource file:/C:/UI1_GIT/./examenproject/html/PersonaliseringPagina.html
+Warning: The “color” input type is not supported in all browsers. Please be sure to test, and consider using a polyfill.
+From line 184, column 17; to line 184, column 146 in resource file:/C:/UI1_GIT/./examenproject/html/PersonaliseringPagina.html
+Document checking completed. No errors found.

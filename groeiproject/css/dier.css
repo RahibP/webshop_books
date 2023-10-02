@@ -1,0 +1,102 @@
+body {
+    width: 95%;
+    margin: auto;
+    font-family: "Tahoma", sans-serif;
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+
+h1 {
+    background-color: red;
+    font-size: 2em;
+}
+
+h2 {
+    background-color: orange;
+}
+
+header h2 {
+    color: white;
+}
+
+header nav {
+    background-color: lightgreen;
+}
+
+
+a:hover {
+    color: red;
+    background-color: blueviolet;
+}
+
+main p::first-letter {
+    font-size: 200%;
+}
+
+main p:after {
+    content: "<einde paragraaf>";
+}
+
+.italic {
+    font-style: italic;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    border: none;
+}
+
+.hoofdinformatie {
+    color: blue;
+}
+
+#hoofdletters {
+    text-transform: uppercase;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav ul li a {
+    background-color: #4A0DA5;
+    color: powderblue;
+    border-radius: 0.5em;
+
+}
+
+.topnav {
+
+}
+/*
+.pipi {
+    width: 1000px;
+    height: 100px;
+    border: 2px solid blue;
+    margin: 0;
+    box-sizing: border-box;
+}
+*/
+
+.hiddenTitle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+}
+
+nav {
+    background-color: blueviolet;
+}
+
+nav h2 {
+    color: red;
+}
+
+
+
